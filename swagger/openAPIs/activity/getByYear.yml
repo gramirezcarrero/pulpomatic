@@ -5,7 +5,10 @@ tags:
 description: Return years
 operationId: getByYear
 parameters:
-  year:
+  - in: query
+    name: year
+    required: true
+    description: Year for find into database
     schema:
       $ref: "#/components/schemas/YearType"
 responses:
