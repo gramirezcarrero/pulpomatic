@@ -5,5 +5,5 @@
         "uri": "mongodb://localhost:27017/iati"
     },
     "count": 25526,
-    "url": "https://iatidatastore.iatistandard.org/search/transaction?q=(activity_recipient_country_code:(SD)%20OR%20transaction_recipient_country_code:(SD))%20AND%20transaction_value_currency:(USD)&fl=id,reporting_org_narrative,activity_*,transaction_*&wt=json&rows=1000"
+    "url": "https://iatidatastore.iatistandard.org/search/transaction?q=(activity_recipient_country_code:(SD)%20OR%20transaction_recipient_country_code:(SD))%20AND%20transaction_value_currency:(USD)&fl=id,reporting_org_narrative,activity_*,transaction_*&wt=json"
 }

@@ -15,9 +15,7 @@ class FindActiviy {
                 $group: {
                     _id: {
                         reporting_org_narrative: "$reporting_org_narrative",
-                        year: {
-                            $year: "$transaction_value_date",
-                        },
+                        year: "$year",
                     },
                     transaction_value_usd: {
                         $sum: "$transaction_value_usd",

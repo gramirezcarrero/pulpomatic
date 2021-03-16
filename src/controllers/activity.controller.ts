@@ -4,6 +4,7 @@ import { Logger } from "../utils/logger";
 import { ActivityModel } from "../models/activity/activity.model";
 import IatiGetAll from "../services/iati/iati.service"
 import FindActiviy from "../services/activity/find.service"
+import AddData from "../services/iati/addData.service"
 import * as Joi from "joi";
 const paramsSchema = Joi.object().keys({
   year: Joi.number().required()
@@ -23,6 +24,14 @@ class ActivitiesController extends BaseController {
   public initRoutes(router: Router): void {
     router.get("/init", this.handler(this.createAll));
     router.get("/activities", this.handler(this.getAll));
+    router.get("/year", this.handler(this.findYear))
+  }
+  private async findYear(request: Request, response: Response) {
+
+    const { error: paramsError, value: query } = paramsSchema.validate(request.query);
+    const AddDataService = new AddData()
+    const data = await AddDataService.populateDatabase(query.year)
+    response.send(data)
   }
   private async getAll(request: Request, response: Response) {
 
