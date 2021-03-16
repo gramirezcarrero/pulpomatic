@@ -1,0 +1,11 @@
+description: Api services for iati app
+version: 0.0.0
+title: Swagger Iati
+termsOfService: https://iatidatastore.iatistandard.org/
+contact:
+  name: Jose Geronimo Ramirez Carrero
+  email: gramirezcarrero@gmail.com
+  url: https://iatidatastore.iatistandard.org 
+license:
+  name: Apache 2.0
+  url: http://www.apache.org/licenses/LICENSE-2.0.html
