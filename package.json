@@ -5,7 +5,7 @@
   "scripts": {
     "build": "tsc",
     "start": "node build/src/server.js",
-    "dev": "nodemon src/server.ts -e ts,yml",
+    "dev": "NODE_ENV=lo nodemon src/server.ts -e ts,yml",
     "lint": "eslint . --ext .ts --fix",
     "debug": "nodemon --watch src/**/* -e ts,json --exec node --inspect-brk -r ts-node/register src/server.ts",
     "1pretest": "eslint . --ext .ts",
