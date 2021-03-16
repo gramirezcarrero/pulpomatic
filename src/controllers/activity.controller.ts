@@ -29,6 +29,11 @@ class ActivitiesController extends BaseController {
   private async findYear(request: Request, response: Response) {
 
     const { error: paramsError, value: query } = paramsSchema.validate(request.query);
+    if (paramsError) {
+      logger.warn("Error Params Data", { paramsError })
+      response.status(400).send(paramsError)
+      return
+    }
     const AddDataService = new AddData()
     const data = await AddDataService.populateDatabase(query.year)
     response.send(data)

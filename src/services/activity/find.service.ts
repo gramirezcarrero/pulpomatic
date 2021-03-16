@@ -1,4 +1,3 @@
-
 import { Logger } from "../../utils/logger";
 const logger = Logger.createLogger(__filename);
 import { ActivityModel } from "../../models/activity/activity.model";
