@@ -11,9 +11,9 @@ class IatiGetAll {
     async populateDatabase(): Promise<null> {
         const url = config.get("url");
         
-        const init_year = 1980;
+        const init_year = 1990;
         let PoolDataRequest = [];
-        for (var i = 0; i < 40; i++) {
+        for (var i = 0; i < 30; i++) {
             const AddDataYearsService = new AddDataYears();
             try {
                 PoolDataRequest[i] = await AddDataYearsService.populateDatabase(init_year + i);
