@@ -51,11 +51,14 @@ class ActivitiesController extends BaseController {
     let newData;
     newData = data_response.map((field) => {
       console.log(field.value[0])
-      const data = field.value[0].data;
-      const _data = data.map((narrative: Narrative) => {
-        return { [narrative._id.reporting_org_narrative]: narrative.transaction_value_usd }
-      })
-      return { [field.value[0]._id.year]: Object.values(_data) }
+      const data = field.value[0]?.data;
+      if (data) {
+        const _data = data.map((narrative: Narrative) => {
+          return { [narrative._id.reporting_org_narrative]: narrative.transaction_value_usd }
+        })
+        return { [field.value[0]._id.year]: Object.values(_data) }
+      }
+
     })
     response.status(200).send(newData)
   }
