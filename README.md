@@ -2,7 +2,7 @@
 Este proyecto es pequeño espero les guste, tenemos typescript con mongo para almacenar un par de datos de iati una api para las actividades financieras o donaciones que se le hacen a Sudan.
 
 #instrucciones de uso:
-debemos tener instalado nvm o nodejs en su defecto 12 o superior. 
+debemos tener instalado nvm o nodejs en su defecto 12 o superior y mongodb.
  ``` 
  nvm use 12
  npm i
